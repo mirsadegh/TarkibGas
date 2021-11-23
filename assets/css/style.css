@@ -52,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Roboto", sans-serif;
+    font-family: Vazir, "Roboto", sans-serif;
 }
 
 
@@ -110,6 +110,7 @@ h6 {
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin-left: 30px;
 }
 
 #header .logo a {
@@ -250,9 +251,9 @@ h6 {
 }
 
 .navbar .dropdown ul {
-    display: block;
+    display: inline-block;
     position: absolute;
-    right: 22px;
+    right: -100px;
     top: calc(100% + 30px);
     margin: 0;
     padding: 10px 0;
@@ -262,10 +263,12 @@ h6 {
     background: #fff;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     transition: 0.3s;
+
 }
 
 .navbar .dropdown ul li {
-    min-width: 200px;
+    width: 150px;
+    display: inline-grid;
 }
 
 .navbar .dropdown ul a {
@@ -274,6 +277,11 @@ h6 {
     font-weight: 500;
     text-transform: none;
     color: #2a2a2a;
+    float: right;
+}
+
+.navbar .dropdown ul a:hover {
+      background: #f1ebeb;
 }
 
 .navbar .dropdown ul a i {
@@ -745,6 +753,75 @@ section {
     color: #fff;
 }
 
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.faq .faq-list {
+    padding: 0 100px;
+  }
+  .faq .faq-list ul {
+    padding: 0;
+    list-style: none;
+  }
+  .faq .faq-list li + li {
+    margin-top: 15px;
+  }
+  .faq .faq-list li {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+  }
+  .faq .faq-list a {
+    display: block;
+    position: relative;
+    font-family:  Vazir,"Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 0 30px;
+    outline: none;
+    cursor: pointer;
+  }
+  .faq .faq-list .icon-help {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    left: 20px;
+    color: #9cdc66;
+  }
+  .faq .faq-list .icon-show, .faq .faq-list .icon-close {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .faq .faq-list p {
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+  }
+  .faq .faq-list .icon-show {
+    display: none;
+  }
+  .faq .faq-list a.collapsed {
+    color: #343a40;
+  }
+  .faq .faq-list a.collapsed:hover {
+    color: #5c9f24;
+  }
+  .faq .faq-list a.collapsed .icon-show {
+    display: inline-block;
+  }
+  .faq .faq-list a.collapsed .icon-close {
+    display: none;
+  }
+  @media (max-width: 1200px) {
+    .faq .faq-list {
+      padding: 0;
+    }
+  }
+  
+
 
 /*--------------------------------------------------------------
 # Contact
@@ -1042,7 +1119,7 @@ section {
 
 
 /*--------------------------------------------------------------
-# langage
+# language
 --------------------------------------------------------------*/
 
 .header-left {
@@ -1064,6 +1141,9 @@ section {
 .mx-1 {
     margin-right: 0.25rem !important;
 }
+.ml-1{
+    margin-left: 0.25rem !important;
+}
 
 @media (max-width:991px) {}
 
@@ -1076,3 +1156,4 @@ section {
 .cursor-pointer {
     cursor: pointer;
 }
+
