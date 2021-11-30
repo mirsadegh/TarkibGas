@@ -212,45 +212,12 @@ $(".lang-li-a").on("click", function(event) {
 
 
 $('.popup').on("click", function(event) {
-    window.location.replace('file:///home/sadegh/Desktop/project/TarkibGas/en/index.html');
     document.body.style.direction = "ltr";
     document.body.style.textAlign = "left";
-
 });
 
 $(".lang-li-a_en").on("click", function(event) {
     $(".popup_en").toggle();
 });
 
-$('.popup_en').on("click", function(event) {
-    window.location.replace('file:///home/sadegh/Desktop/project/TarkibGas/index.html');
-});
 
-
-// var lang = {
-//     en: {
-//         headertxt: "Multiple lang",
-//         wellcome: "Wellcome to :"
-//     },
-//     fa: {
-//         headertxt: "نمایش چند زبانه",
-//         wellcome: "خوش آمدید به :"
-//     }
-// }
-// if (window.location.hash) {
-//     if (window.location.hash == "#en") {
-
-//         headertxt.textContent = lang.en.headertxt,
-
-//             document.body.style.direction = "ltr"
-
-//     }
-// }
-
-// var reload = document.querySelectorAll('.reload');
-// for (i = 0; i <= reload.length; i++) {
-//     reload[i].onclick = function() {
-//         window.location.hash = this.getAttribute('href');
-//         window.location.reload();
-//     }
-// }
