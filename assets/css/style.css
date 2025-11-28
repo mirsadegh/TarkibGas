@@ -1557,8 +1557,20 @@ main {
     padding: 0;
 }
 
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/" !important;
+    color: var(--text-secondary);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    float: right;
+}
+
 .breadcrumb-item a {
     color: var(--text-secondary);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary-color);
 }
 
 .breadcrumb-item.active {
