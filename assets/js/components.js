@@ -74,19 +74,44 @@
         });
     }
 
+    // تابع برای راه‌اندازی تغییر زبان
+    function initLanguageSwitcher() {
+        const langButton = document.querySelector('.lang-li-a');
+        const langPopup = document.querySelector('.lang-li .popup');
+
+        if (langButton && langPopup) {
+            // کلیک روی دکمه زبان
+            langButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isVisible = langPopup.style.display === 'block';
+                langPopup.style.display = isVisible ? 'none' : 'block';
+            });
+
+            // بستن popup با کلیک خارج از آن
+            document.addEventListener('click', function(e) {
+                if (!langButton.contains(e.target) && !langPopup.contains(e.target)) {
+                    langPopup.style.display = 'none';
+                }
+            });
+        }
+    }
+
     // لود کردن کامپوننت‌ها هنگام آماده شدن صفحه
     document.addEventListener('DOMContentLoaded', async function() {
         // لود navbar
         await loadComponent('navbar-placeholder', '/components/navbar.html');
-        
+
         // لود footer
         await loadComponent('footer-placeholder', '/components/footer.html');
-        
+
         // تنظیم لینک فعال
         setActiveNavLink();
-        
+
         // راه‌اندازی mobile menu
         initMobileNav();
+
+        // راه‌اندازی تغییر زبان
+        initLanguageSwitcher();
     });
 })();
 

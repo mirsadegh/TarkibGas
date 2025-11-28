@@ -1273,6 +1273,53 @@ section {
     cursor: pointer;
 }
 
+/* Language Switcher */
+.lang-li {
+    position: relative;
+}
+
+.lang-li-a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.lang-li-a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-li .popup {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--bg-card, rgba(15, 15, 25, 0.95));
+    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 120px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.lang-li .popup a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    color: var(--text-color, #fff);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.lang-li .popup a:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
 /*--------------------------------------------------------------
 # Custom Cards & Components
 --------------------------------------------------------------*/
